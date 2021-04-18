@@ -10,7 +10,7 @@ const PageLayout: FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="max-w-screen-xl m-auto">
+      <main>
         <DarkModeBtn />
         {children}
         <p  className="font-display">my cool footer</p>
