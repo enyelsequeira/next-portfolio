@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:root{
+  /* light mode colors */
+  --primary: #f9f9f9;
+  --text-base: #000;
+  --text-primary: #F58A07;
+  --text-secondary: #55868C;
+  --secondary:#ffe0ac;
+  --tenariary:  #ffacb7;
+  --accent: #6886c5;
+
+  /* dark palate */
+  --dark-primary: #1c2d50;
+  --dark-text-base: #FEC576;
+  --dark-text-primary: #FFFFFF;
+  --dark-secondary: #133b5c;
+  --dark-ternariary: #1e5f74;
+  --dark-accent: #fcdab7
+
+}
+

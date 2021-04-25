@@ -7,15 +7,16 @@ import DarkModeBtn from "../DarkModeBtn/DarkModeBtn";
 
 
 
-const Header: FC = () => {
+const Header: FC = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (
     <>
       <div className="flex flex-wrap py-2">
         <div className="w-full px-4">
-          <nav className="relative flex flex-wrap items-center justify-between px-2 py-3  font-display">
-            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-              <div className="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+          <nav className="flex flex-wrap sticky items-center justify-between px-2 py-3 bg-t-ternary dark:bg-d-third font-display">
+            <div className="container px-4 mx-auto flex flex-wrap items-center sticky justify-between">
+              
+              <div className="w-full relative flex justify-between lg:w-auto px-4 lg:sticky  lg:justify-start">
                 <Link href="/">
                   <a className="text-sm font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase">
                     <Image src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
