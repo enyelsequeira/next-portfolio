@@ -1,4 +1,4 @@
-import PageLayout from "@/layout/Layout";
+import PageLayout from "@/layouts/MainLayout";
 import "@/styles/main.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";

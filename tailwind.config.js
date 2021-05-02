@@ -10,6 +10,12 @@ module.exports = {
       body: ['Quattrocento', 'serif'],
     },
     extend: {
+      gridTemplateColumns: {
+        'test': 'repeat(3, minmax(0, 400px));',
+      },
+      gridTemplateRows: {
+        'rowt-': 'repeat(7, 1fr)',
+      },
       colors: {
         light: 'var(--primary)',
         't-base': 'var(--text-base)',

@@ -1,5 +1,5 @@
 module.exports = {
-  future: {
-    webpack: true,
+  images: {
+    domains: ['images.ctfassets.net'],
   },
-};
+}
