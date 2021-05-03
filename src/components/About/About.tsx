@@ -17,7 +17,7 @@ const About = (): JSX.Element => {
         <p className="font-body text-base md:text-xl tracking-wide mb-3">
           I've worked with a wide range of people from different backgrounds and demographics. This has enabled me to adapt and become <span className="font-extrabold text-light-accent dark:text-d-accent ">flexible</span> in the workplace.
         </p>
-        <a  href="/" className="bg-light-accent font-body text-t-ternary hover:bg-t-ternary hover:text-t-base dark:bg-d-accent dark:text-d-third text-xl py-1 px-4 rounded-md dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 flex w-max mx-auto ">Find More</a>
+        <a  href="/" className="bg-light-accent font-body text-t-ternary hover:bg-t-ternary hover:text-t-base dark:bg-d-accent dark:text-d-third text-xl py-1 px-4 rounded-md dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 flex w-max mx-auto my-6 ">Find More</a>
       </div>
 
     </div>

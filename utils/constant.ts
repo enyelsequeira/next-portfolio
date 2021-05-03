@@ -1,10 +1,18 @@
+export interface Project {
+  data: {
+    id:number
+    title: string;
+    publishedAt: string;
+    image?: string;
+    summary: string;
+    github: string;
+    visit: string;
+    keywords: string[];
+  };
+  filePath: string
 
-export interface Projects {
-  title: string;
-  description: string;
-  image?: string
-  tags: string[],
-  source:string,
-  visit: string,
+}
 
+export interface Projects{
+  data: Project[]
 }

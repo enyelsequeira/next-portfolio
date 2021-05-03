@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import PageLayout from './MainLayout';
 
 
 interface Props {
@@ -7,13 +6,11 @@ interface Props {
 }
 const Project: FC<Props> = ({ children }):JSX.Element => {
   return (
-    <PageLayout>
       <main>
         hello  Projects
+        is this rendering as well
       </main>
       
-     
-    </PageLayout>
   )
 }
 

@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 
-
 const pageVariants = {
   pageInitial: {
     backgroundColor: 'red',

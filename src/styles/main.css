@@ -4,11 +4,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .div1 { grid-area: 3 / 1 / 6 / 2; }
-  .div2 { grid-area: 5 / 2 / 8 / 3; }
-  .div3 { grid-area: 1 / 2 / 4 / 3; }
-  .div4 { grid-area: 3 / 3 / 6 / 4; }
-
-  
-}
