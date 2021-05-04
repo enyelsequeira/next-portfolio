@@ -1,3 +1,8 @@
+export interface Technology{
+  name: string;
+  type:string
+}
+
 export interface Project {
   data: {
     id:number
@@ -7,7 +12,7 @@ export interface Project {
     summary: string;
     github: string;
     visit: string;
-    keywords: string[];
+    technologies: Technology[];
   };
   filePath: string
 

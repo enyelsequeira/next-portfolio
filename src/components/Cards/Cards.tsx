@@ -2,8 +2,25 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { FaReact } from "react-icons/fa";
+import { SiAmazonaws, SiGatsby, SiGraphql, SiMaterialUi, SiNextDotJs, SiNodeDotJs, SiRedux, SiStyledComponents, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { Project, Projects } from "../../../utils/constant";
 
+
+const icons = {
+  React: FaReact,
+  Redux: SiRedux,
+  MaterialUI: SiMaterialUi,
+  Gatsby: SiGatsby,
+  GraphQL: SiGraphql,
+  StyledComponents: SiStyledComponents,
+  Next: SiNextDotJs,
+  TypeScript: SiTypescript,
+  Tailwind: SiTailwindcss,
+  NodeJs: SiNodeDotJs,
+  AWS: SiAmazonaws
+
+}
 const Cards = ({ data }: Projects): JSX.Element => {
 
   console.log(data)
@@ -16,6 +33,13 @@ const Cards = ({ data }: Projects): JSX.Element => {
       case 3: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
       case 4: return `${prefix} lg:col-start-div4 lg:col-end-div4 lg:row-start-div4 lg:row-end-div4`;
     }
+  }
+
+  const renderIcon = (type) =>{
+    if(!icons[type]) return false;
+
+    const Icon = icons[type]
+    return <Icon />
   }
 
   return (
@@ -31,8 +55,15 @@ const Cards = ({ data }: Projects): JSX.Element => {
               <div key={project.data.id} className={`${classNamesForGrid(project.data.id)}`}>
                 <Link as={`/projects/${project.filePath.replace(/\.mdx?$/, '')}`} href={`/projects/[slug]`}>
 
-                  <div className="p-2 cursor-pointer  ">
+                  <div className="p-2 cursor-pointer relative">
                     <Image className="rounded-xl  transform duration-300 group-hover:scale-110" src={project.data.image} width="700" height="400" />
+                    {project.data.technologies && (
+                      <div className="flex  absolute -bottom-4 right-3 w-2/5 justify-around">{project.data.technologies.map((tech) => {
+                        return(
+                          <span key={tech.name} className="text-t-base text-2xl dark:text-d-accent ">{renderIcon(tech.name)}</span>
+                        )
+                      })}</div>
+                    )}
                   </div>
                 </Link>
 
@@ -46,14 +77,16 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </p>
 
                   </div>
-                
+              
                 </div>
 
                 <div className="px-6 pt-2 pb-2">
-                  <p className="text-lg p-2 font-display font-light">Stack</p>
-                  {project.data.keywords.map((tag, i) => {
+                  <p className="text-lg pb-3 font-display font-light">Stack</p>
+                  {project.data.technologies.map((tag) => {
                     return (
-                      <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+                      <>
+                      <span key={tag.name} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag.name}</span>
+                      </>
                     )
                   })}
                 </div>
