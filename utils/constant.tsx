@@ -46,7 +46,7 @@ export const renderIcon = (type) =>{
 }
 
 export const classNamesForGrid = (id: number) => {
-  const prefix = 'md:max-w-xs md:h-[650px] lg:h-[650px]  lg:max-w-md max-w-md  group  transform hover:-translate-y-1 duration-300 hover:shadow-xl rounded shadow-lg border-2 border-t-primary mb-2 bg-secondary-bg dark:bg-transparent md:relative'
+  const prefix = 'md:max-w-xs md:h-[650px] lg:h-[650px]  lg:max-w-md max-w-md   hover:shadow-xl rounded shadow-lg border-2 border-t-primary mb-2 bg-secondary-bg dark:bg-transparent md:relative'
   switch (id) {
     case 1: return `${prefix} lg:col-start-div1 lg:col-end-div1 lg:row-start-div1 lg:row-end-div1 `;
     case 2: return `${prefix} lg:col-start-div2 lg:col-end-div2 lg:row-start-div2 lg:row-end-div2`;
