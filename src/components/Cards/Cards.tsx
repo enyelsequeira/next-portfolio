@@ -14,11 +14,11 @@ const Cards = ({ data }: Projects): JSX.Element => {
   const arrowAnimation = useAnimation()
   useEffect(() => {
     if (inView) {
-      
+
       animation.start({
         opacity: 1,
         transition: {
-          type: "tween",  duration:3,  ease: "linear"
+          type: "tween", duration: 3, ease: "linear"
         },
 
       });
@@ -50,11 +50,13 @@ const Cards = ({ data }: Projects): JSX.Element => {
         {data.map((project: Project) => {
           return (
             <>
-              <motion.div animate={animation} key={project.data.id} className={`${classNamesForGrid(project.data.id)}`}>
+              <motion.div animate={animation} key={project.filePath} className={`${classNamesForGrid(project.data.id)} font-body`}>
 
                 <div className="p-2  relative group  transform hover:-translate-y-1 duration-300">
-                  <Link as={`/projects/${project.filePath.replace(/\.mdx?$/, '')}`} href={`/projects/[slug]`} >
-                    <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.data.image} width="700" height="400" />
+                  <Link as={`/projects/${project.filePath.replace(/\.mdx?$/, '')}`} href={`/projects/[slug]`}>
+                    <a>
+                      <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.data.image} width="700" height="400" />
+                    </a>
                   </Link>
                   {project.data.technologies && (
                     <div className="flex  absolute -bottom-4 right-3 w-2/5 justify-around">{project.data.technologies.map((tech) => {
@@ -69,7 +71,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   <p className="font-semibold tracking-wider font-display text-xl mb-2">{project.data.title}</p>
 
                   <div>
-                    <p className="text-t-primary text-base">
+                    <p className="text-t-primary text-base font-body ">
                       {project.data.summary}
                     </p>
 
