@@ -9,7 +9,6 @@ export interface Technology{
 }
 
 export interface Project {
-  data: {
     id:number
     title: string;
     publishedAt: string;
@@ -18,8 +17,14 @@ export interface Project {
     github: string;
     visit: string;
     technologies: Technology[];
-  };
-  filePath: string
+    slug: string;
+    readingTime: {
+      minutes?: number;
+      text?: string;
+      time?: number;
+      words?: number;
+    }
+
 }
 export interface Projects{
   data: Project[]
@@ -107,4 +112,16 @@ export const classNamesForGrid = (id: number) => {
     case 3: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
     case 4: return `${prefix} lg:col-start-div4 lg:col-end-div4 lg:row-start-div4 lg:row-end-div4`;
   }
+}
+
+
+/**
+ * Asserts if the value passed is `defined`
+ *
+ * @param value {*} Value to be asserted
+ *
+ * @returns {boolean} `true` | `false`
+ */
+ export function isDefined(value: any): boolean {
+  return typeof value !== "undefined" && value !== undefined;
 }

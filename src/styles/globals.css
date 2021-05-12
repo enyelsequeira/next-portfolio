@@ -22,7 +22,7 @@ a {
   --secondary:#f7eff0;
   --tenariary:  #ffacb7;
   --accent: #6886c5;
-
+  --faded: "rgba(255, 255, 255, 0.78)";
   /* dark palate */
   --dark-primary: #1c2d50;
   --dark-text-base: #FEC576;

@@ -1,11 +1,8 @@
-import { projectFilePaths, PROJECT_PATH } from "@/../utils/mdxUtils";
 import About from "@/components/About/About";
 import Cards from "@/components/Cards/Cards";
 import Hero from "@/components/Hero/Hero";
 import Social from "@/components/Social/Social";
-import fs from 'fs';
-import matter from 'gray-matter';
-import path from 'path';
+import { getAllFileFrontMatter } from "@/utils/mdxUtils";
 
 
 export default function Home({projects}) {
@@ -19,17 +16,26 @@ export default function Home({projects}) {
   )
 }
 
-export function getStaticProps() {
-  const projects = projectFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(PROJECT_PATH, filePath))
-    const { content, data } = matter(source)
+// export function getStaticProps() {
+//   const projects = projectFilePaths.map((filePath) => {
+//     const source = fs.readFileSync(path.join(PROJECT_PATH, filePath))
+//     const { content, data } = matter(source)
 
-    return {
-      content,
-      data,
-      filePath,
+//     return {
+//       content,
+//       data,
+//       filePath,
+//     }
+//   })
+
+//   return { props: { projects } }
+// }
+
+export async function getStaticProps(){
+  const projects = await getAllFileFrontMatter("projects")
+  return{
+    props:{
+      projects
     }
-  })
-
-  return { props: { projects } }
+  }
 }

@@ -1,4 +1,4 @@
-import { Social, SocialMedia } from '@/../utils/constant'
+import { Social, SocialMedia } from '@/utils/constant'
 import React, { FC } from 'react'
 
 const SocialLinks: FC = (): JSX.Element => {

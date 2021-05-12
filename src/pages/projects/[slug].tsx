@@ -3,9 +3,10 @@ import matter from 'gray-matter'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 import path from 'path'
-import { projectFilePaths, PROJECT_PATH } from '../../../utils/mdxUtils'
+import readingTime from "reading-time"
 import MarkdownComponents from '../../components/MarkdownComponents/MarkdownComponents'
 import Project from '../../layouts/ProjectLayout'
+import { projectFilePaths, PROJECT_PATH } from '../../utils/mdxUtils'
 
 
 
@@ -14,7 +15,6 @@ export default function PostPage({ source, frontMatter }) {
   return (
     <Project data={frontMatter}>
       {content}
-
     </Project>
   )
 }
@@ -38,7 +38,12 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       source: mdxSource,
-      frontMatter: data,
+      frontMatter: {
+        wordCount: content.split(/\s+/gu).length,
+        readingTime: readingTime(content),
+        ...data
+        
+      }
     },
   }
 }

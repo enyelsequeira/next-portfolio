@@ -11,7 +11,7 @@ const Header: FC = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (
     <>
-      <div className="flex flex-wrap py-2">
+      <header className="flex flex-wrap py-2">
         <div className="w-full px-4">
           <nav className="flex flex-wrap sticky items-center justify-between px-2 py-3 bg-t-ternary dark:bg-d-third font-display">
             <div className="container px-4 mx-auto flex flex-wrap items-center sticky justify-between">
@@ -73,7 +73,7 @@ const Header: FC = (): JSX.Element => {
             </div>
           </nav>
         </div>
-      </div>
+      </header>
     </>
   )
 }

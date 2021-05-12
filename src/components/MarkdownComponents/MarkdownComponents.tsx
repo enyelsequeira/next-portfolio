@@ -4,15 +4,23 @@ import React from 'react';
 
 
 const MarkdownComponents = {
-  h1: (props) => <h1 className="text-red-300" {...props} />,
+  h1: (props) => <p className="text-t-primary text-4xl capitalize font-display" {...props} />,
   h2: (props) => <h2 {...props} />,
+  a: (props) => {
+    return <a className="text-red-400 no-underline" href={props.href}>{props.children}</a>
+  },
+  span: (props) => {
+    return <span className="text-t-ternary ">{props.children}</span>
+  },
+
   img: (props) => {
+    console.log(props);
     return (
-      <div className="p-2 rounded-xl">
-        {props.src && <Image className="rounded-xl" width="500" height="300" src={props.src} alt={props.alt} layout="responsive"/>}
-      </div>
+      <>
+        {props.src && <Image className="rounded-xl" width="500" height="300" src={props.src} alt={props.alt} layout="responsive"  />}
+        </>
     )
-  }, 
+  },
 
 
 }
