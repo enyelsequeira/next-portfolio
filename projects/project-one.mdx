@@ -17,6 +17,8 @@ technologies:
     type: CSS
     id: 3
 ---
+
+
 # Outline
 
 - [Introduction](#introduction)
@@ -28,7 +30,7 @@ technologies:
 - [Stack](#technologies)
 
 - [Previews](#previews)
-- [Running](#run)
+- [Running](#running-the-app)
 - [Demo/site](#demo)
 
 # introduction
@@ -42,6 +44,10 @@ After finishing, the stack that I decided to use was <span> NextJS </span> as it
 The project itself took me about 2 days to finish. Most of the data that is being render for information is coming from <span> Contentful</span> and the blog posts are using <span>MDX</span>. This is something that in the future I plan on changing and only using one source to fetch the data from. 
 
 # challenges
+- Not having worked with <span>TypeScript</span> in the past, it made it difficult to understand some concepts that I wanted to apply in the code.
+- Not being a designer, I have always struggled with finding the right colors and the layout components
+- Using <span> Contenful </span> creating the queries was a bit difficult to do, but was able to do, it does need refactoring to make it better using the DRY method.
+- Adding features such as leaving comments and likes will be difficult as I would need a way to store the data  
 
 
 # improvements that could be made and are in the process
@@ -52,7 +58,7 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 - The app could have a section after each post to create a suggestion box, in order to change something in the post or add more up to date a correct information
 
 # technologies
-- react 
+- React 
 - NextJS
 - TypeScript
 - Markdown
@@ -66,7 +72,22 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 
 ![previewThree](/images/blog.png)
 
+# Running the app
+
+- Clone the app
+- Add Dependencies
+```bash
+npm install 
+yarn add
+```
+
+- Create .env file and add your information from <span>Contenful</span>
+```javascript
+CONTENTFUL_SPACE_ID=mycontenfulspaceid
+CONTENTFUL_ACCESS_TOKEN=myaccestoken
+```
+
 
 # demo
-- [site](https://link)
-- [code](link)
+- [site](https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/)
+- [code](https://github.com/enyelsequeira/next-tailwind-blog)

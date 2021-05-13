@@ -112,6 +112,7 @@ export const classNamesForGrid = (id: number) => {
     case 3: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
     case 4: return `${prefix} lg:col-start-div4 lg:col-end-div4 lg:row-start-div4 lg:row-end-div4`;
   }
+  
 }
 
 

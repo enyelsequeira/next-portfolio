@@ -7,7 +7,7 @@ const MarkdownComponents = {
   h1: (props) => <p className="text-t-primary text-4xl capitalize font-display" {...props} />,
   h2: (props) => <h2 {...props} />,
   a: (props) => {
-    return <a className="text-red-400 no-underline" href={props.href}>{props.children}</a>
+    return <a className="text-red-400 no-underline" target="_blank" href={props.href}>{props.children}</a>
   },
   span: (props) => {
     return <span className="text-t-ternary ">{props.children}</span>

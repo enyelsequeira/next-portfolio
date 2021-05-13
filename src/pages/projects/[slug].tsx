@@ -29,7 +29,11 @@ export const getStaticProps = async ({ params }) => {
     components: MarkdownComponents,
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [
+        require("remark-autolink-headings"),
+        require('remark-slug'),
+        require("remark-code-titles"),
+      ],
       rehypePlugins: [],
     },
     scope: data,
