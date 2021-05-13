@@ -23,47 +23,54 @@ technologies:
 # Outline
 
 - [Introduction](#introduction)
-
+- [Functionalities](#functionalities)
 - [Challenges](#challenges)
-
 - [Coming Features](#improvements-that-could-be-made-and-are-in-the-process)
-
 - [Stack](#technologies)
-
 - [Previews](#previews)
 - [Running](#running-the-app)
 - [Demo/site](#demo)
 
 # introduction
 
- This project was built during a live coding event hosted by Practicum by Yandex, where they asked me how to build a website/blog using the <span> JAM </span> stack. 
- 
-The project was actually built using <span> Gatsby </span> and <span> Contentful </span> , but after finishing the coding event, I thought the code could be better written for further improvements in the future, after finishing I decided to re do the code-base using another stack.
+This was my first big project after finishing my bootcamp, and it's the one I am the most proud of, using up to date stack.
 
-After finishing, the stack that I decided to use was <span> NextJS </span> as it is a very popular react framework, but also very easy to use and create production like applications. With NextJS I've also decided to use <span> TypeScript </span>, because I started learning a few weeks ago and wanted to build a site with it to practice.
+This is a movie app that allows user to search for any movie possible, and also allows the user to see information about each specific movie, as well as the trailer for specified movie. 
 
-The project itself took me about 2 days to finish. Most of the data that is being render for information is coming from <span> Contentful</span> and the blog posts are using <span>MDX</span>. This is something that in the future I plan on changing and only using one source to fetch the data from. 
+The difference between this app and other movies app is that this app allows the user to speak to the app by giving certain commands and the app will do those command accordingly using <span>AI</span>.
+
+
+# functionalities 
+- It allows the user to click on a specific Genre and the app fetches movies according to that Genre.
+- Displays information about each specific movie from reviews to cast of the film
+- It allows the user to give commands such as:
+  - Go to (category...)
+  - change screen mode
+  - What does this app do?
+  - more to come
+- It allows the user to change screen mode
+
 
 # challenges
-- Not having worked with <span>TypeScript</span> in the past, it made it difficult to understand some concepts that I wanted to apply in the code.
-- Not being a designer, I have always struggled with finding the right colors and the layout components
-- Using <span> Contenful </span> creating the queries was a bit difficult to do, but was able to do, it does need refactoring to make it better using the DRY method.
-- Adding features such as leaving comments and likes will be difficult as I would need a way to store the data  
+- Getting used to working with <span>MaterialUI</span> 
+- Using <span> Redux </span> to control state Management in a some what big application
+- Making the layout responsive actually took some time to make it look the way I wanted
+
 
 
 # improvements that could be made and are in the process
-- It could render information from only one source, instead of having two different sources.
-- The app could have a functionality to create a user and each user could have its own dashboard to save posts to read later
-- The app could have a filter by categories
-- The app could recommend most viewed blog post of the week as well as could have a function to like or dislike the post
-- The app could have a section after each post to create a suggestion box, in order to change something in the post or add more up to date a correct information
+- Give results as the users type a letter or word
+- Allowing the user to save movies
+- Allowing user to have an own account
 
 # technologies
-- React 
-- NextJS
-- TypeScript
-- Markdown
-- Contentful
+
+- React
+- React-router-dom
+- Redux, Thunk
+- MaterialUI
+
+
 
 # previews
 
@@ -76,19 +83,21 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 # Running the app
 
 - Clone the app
-- Add Dependencies
+
+- Install Dependencies
+
 ```bash
+cd front-end or cd back-end
 npm install 
 yarn add
 ```
 
-- Create .env file and add your information from <span>Contenful</span>
+- Create .env file and add your information from <span>TMDB</span>
 ```javascript
-CONTENTFUL_SPACE_ID=mycontenfulspaceid
-CONTENTFUL_ACCESS_TOKEN=myaccestoken
+REACT_APP_API_KEY='YourAPIKey';
 ```
 
 
 # demo
-- [site](https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/)
-- [code](https://github.com/enyelsequeira/next-tailwind-blog)
+- [site](https://newmovies.netlify.app/)
+- [code](https://github.com/enyelsequeira/movieshook)

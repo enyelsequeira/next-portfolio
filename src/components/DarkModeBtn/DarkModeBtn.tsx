@@ -11,7 +11,7 @@ const DarkModeBtn = (): JSX.Element => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800  dark:hover:bg-gray-700 transition-all rounded flex items-center justify-center h-7 w-7"
+      className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800  dark:hover:bg-gray-700 transition-all rounded flex items-center justify-center h-7 max-w-min p-1"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {mounted && (

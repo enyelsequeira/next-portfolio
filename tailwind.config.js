@@ -48,7 +48,7 @@ module.exports = {
         div3: '4',
         div4: '6',
       },
-      typography: (theme) => ({
+      typography: () => ({
         DEFAULT: {
           css: {
             'ul > li > p > a': {
@@ -61,7 +61,6 @@ module.exports = {
             'ul > li > a':{
               color: 'var(--accent)',
               textDecoration: 'none',
-              textTransform: "uppercase",
               transition: "500ms",
               '&:hover': {
                 color: '#c4d8d8',

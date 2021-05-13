@@ -22,47 +22,29 @@ technologies:
 # Outline
 
 - [Introduction](#introduction)
-
 - [Challenges](#challenges)
-
-- [Coming Features](#improvements-that-could-be-made-and-are-in-the-process)
-
 - [Stack](#technologies)
-
 - [Previews](#previews)
-- [Running](#running-the-app)
 - [Demo/site](#demo)
 
 # introduction
 
- This project was built during a live coding event hosted by Practicum by Yandex, where they asked me how to build a website/blog using the <span> JAM </span> stack. 
- 
-The project was actually built using <span> Gatsby </span> and <span> Contentful </span> , but after finishing the coding event, I thought the code could be better written for further improvements in the future, after finishing I decided to re do the code-base using another stack.
+After finishing Practicum by Yandex bootcamp a group of 2 students and myself had the opportunity to work for a company called IterativeAI.
 
-After finishing, the stack that I decided to use was <span> NextJS </span> as it is a very popular react framework, but also very easy to use and create production like applications. With NextJS I've also decided to use <span> TypeScript </span>, because I started learning a few weeks ago and wanted to build a site with it to practice.
+IterativeAI is data science and machine learning version control platform, they came to us wanting a new static landing page built with Gatsby. We were able to develop and ship this site in about 3 weeks.
 
-The project itself took me about 2 days to finish. Most of the data that is being render for information is coming from <span> Contentful</span> and the blog posts are using <span>MDX</span>. This is something that in the future I plan on changing and only using one source to fetch the data from. 
 
 # challenges
-- Not having worked with <span>TypeScript</span> in the past, it made it difficult to understand some concepts that I wanted to apply in the code.
-- Not being a designer, I have always struggled with finding the right colors and the layout components
-- Using <span> Contenful </span> creating the queries was a bit difficult to do, but was able to do, it does need refactoring to make it better using the DRY method.
-- Adding features such as leaving comments and likes will be difficult as I would need a way to store the data  
-
-
-# improvements that could be made and are in the process
-- It could render information from only one source, instead of having two different sources.
-- The app could have a functionality to create a user and each user could have its own dashboard to save posts to read later
-- The app could have a filter by categories
-- The app could recommend most viewed blog post of the week as well as could have a function to like or dislike the post
-- The app could have a section after each post to create a suggestion box, in order to change something in the post or add more up to date a correct information
+- Communication between team mates was hard, due to time difference.
+- Following design specific without making too many changes
 
 # technologies
-- React 
-- NextJS
-- TypeScript
-- Markdown
-- Contentful
+
+- Gatsby
+- Styled-Components
+- SEO techniques 
+- GraphQL
+
 
 # previews
 
@@ -72,22 +54,7 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 
 ![previewThree](/images/blog.png)
 
-# Running the app
-
-- Clone the app
-- Add Dependencies
-```bash
-npm install 
-yarn add
-```
-
-- Create .env file and add your information from <span>Contenful</span>
-```javascript
-CONTENTFUL_SPACE_ID=mycontenfulspaceid
-CONTENTFUL_ACCESS_TOKEN=myaccestoken
-```
 
 
 # demo
-- [site](https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/)
-- [code](https://github.com/enyelsequeira/next-tailwind-blog)
+- [site](https://iterative.ai/)

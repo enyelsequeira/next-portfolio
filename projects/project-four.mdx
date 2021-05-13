@@ -23,26 +23,31 @@ technologies:
 # Outline
 
 - [Introduction](#introduction)
-
+- [Functionalities](#functionalities)
 - [Challenges](#challenges)
-
 - [Coming Features](#improvements-that-could-be-made-and-are-in-the-process)
-
 - [Stack](#technologies)
-
 - [Previews](#previews)
 - [Running](#running-the-app)
 - [Demo/site](#demo)
 
 # introduction
 
- This project was built during a live coding event hosted by Practicum by Yandex, where they asked me how to build a website/blog using the <span> JAM </span> stack. 
+This a full stack project that was built during my bootcamp with Practicum by Yandex. 
  
-The project was actually built using <span> Gatsby </span> and <span> Contentful </span> , but after finishing the coding event, I thought the code could be better written for further improvements in the future, after finishing I decided to re do the code-base using another stack.
+This project took about 3 weeks to finishing both front-end part and the back-end, for the front-end it uses<span> React </span> and <span> BEM</span>, to style components accordingly. This app combines two different <span>API's'</span> one that is the newsApi, and the other one is my own api.
 
-After finishing, the stack that I decided to use was <span> NextJS </span> as it is a very popular react framework, but also very easy to use and create production like applications. With NextJS I've also decided to use <span> TypeScript </span>, because I started learning a few weeks ago and wanted to build a site with it to practice.
+For my own <span>API</span>, I am using NodeJS and hosting with <span>AWS</span>, I am using express to handle routes as well as other middleware for the app's logic, such as routing and validation.
 
-The project itself took me about 2 days to finish. Most of the data that is being render for information is coming from <span> Contentful</span> and the blog posts are using <span>MDX</span>. This is something that in the future I plan on changing and only using one source to fetch the data from. 
+
+# functionalities 
+- It allows the user to sign-up, and sign-m for this it use my own <span>API</span> 
+- Back-end Validation to have unique values for username and for password to have the minimum characters
+- Front-end Validation for when the user sign in, it must submit the correct value and allow the user to protected routes
+- It allows the user to search for news, if no keyword is found or entered the button will be disabled
+- It allows the user to save the news to read later, if it is duplicate it will not be saved
+- It allows the user to go protected route like a personal dashboard where the news are saved 
+- User can delete the news from the dashboard
 
 # challenges
 - Not having worked with <span>TypeScript</span> in the past, it made it difficult to understand some concepts that I wanted to apply in the code.
@@ -52,18 +57,31 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 
 
 # improvements that could be made and are in the process
-- It could render information from only one source, instead of having two different sources.
-- The app could have a functionality to create a user and each user could have its own dashboard to save posts to read later
-- The app could have a filter by categories
-- The app could recommend most viewed blog post of the week as well as could have a function to like or dislike the post
-- The app could have a section after each post to create a suggestion box, in order to change something in the post or add more up to date a correct information
+- Better codebase, I think the readability of the code is messy as of now, due to standards I had to follow.
+- Logic needs to improved and separated to follow up to date standards
+- Better UI design, as of now the design is too plain
+- Backend-end code could be improved by using a different database such as PSQL and using <span>typeORM</span> 
+- Front-end could be done with TypeScript and probably NextJS or Gatsby
 
 # technologies
-- React 
-- NextJS
-- TypeScript
-- Markdown
-- Contentful
+
+- Backend
+  - NodeJs
+  - Express
+  - Celebrate
+  - Helmet
+  - Validator
+  - Mongoose
+  - Express-rate-limit
+  - Winston
+  - JasonWebToken
+  - Bcrypt
+
+- Frontend
+   - React
+   - React-Router-Dom
+   - -react-hook-form (to be added)
+
 
 # previews
 
@@ -76,19 +94,21 @@ The project itself took me about 2 days to finish. Most of the data that is bein
 # Running the app
 
 - Clone the app
-- Add Dependencies
+- cd into the correct folder 
+- install Dependencies
+
 ```bash
+cd front-end or cd back-end
 npm install 
 yarn add
 ```
 
-- Create .env file and add your information from <span>Contenful</span>
+- Create .env file and add your information from <span>News API</span>
 ```javascript
-CONTENTFUL_SPACE_ID=mycontenfulspaceid
-CONTENTFUL_ACCESS_TOKEN=myaccestoken
+NEWS_API_KEY=myapikey
 ```
 
 
 # demo
-- [site](https://next-tailwind-blog-git-main-enyelsequeira.vercel.app/)
-- [code](https://github.com/enyelsequeira/next-tailwind-blog)
+- [site](https://news-explorer.vercel.app/)
+- [code](https://github.com/enyelsequeira/news-explorer-frontend)

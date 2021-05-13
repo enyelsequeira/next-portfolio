@@ -14,7 +14,7 @@ const Header: FC = (): JSX.Element => {
       <header className="flex flex-wrap py-2">
         <div className="w-full px-4">
           <nav className="flex flex-wrap sticky items-center justify-between px-2 py-3 bg-t-ternary dark:bg-d-third font-display">
-            <div className="container px-4 mx-auto flex flex-wrap items-center sticky justify-between">
+            <div className="container px-4 mx-auto flex flex-wrap items-center sticky justify-between space-y-1">
               
               <div className="w-full relative flex justify-between lg:w-auto px-4 lg:sticky  lg:justify-start">
                 <Link href="/">
@@ -42,7 +42,7 @@ const Header: FC = (): JSX.Element => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/blog">
+                    <Link href="/#about">
                       <a className="px-3 py-2 flex items-center text-xs uppercase font-medium leading-snug hover:opacity-75">
                         About
                       </a>
@@ -50,8 +50,8 @@ const Header: FC = (): JSX.Element => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/about">
-                      <a className="px-3 py-2 flex items-center text-xs uppercase font-medium leading-snug hover:opacity-75">
+                    <Link href='/#projects'>
+                      <a  className="px-3 py-2 flex items-center text-xs uppercase font-medium leading-snug hover:opacity-75">
                         Projects
                       </a>
                     </Link>
@@ -65,7 +65,7 @@ const Header: FC = (): JSX.Element => {
                     </Link>
                   </li>
 
-                  <li className="nav-item my-2 md:my-0 px-2 md:px-1 self-start md:self-center">
+                  <li className="nav-item my-2  px-2 md:mx-0 lg:mx-1 self-start md:my-1 lg:my-auto">
                     <DarkModeBtn />
                   </li>
                 </ul>

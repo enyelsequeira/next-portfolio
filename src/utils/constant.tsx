@@ -105,24 +105,12 @@ export const SocialMedia: Social[] = [
 ]
 
 export const classNamesForGrid = (id: number) => {
-  const prefix = 'md:max-w-xs md:h-[650px] lg:h-[650px]  lg:max-w-md max-w-md   hover:shadow-xl rounded shadow-lg border-2 border-t-primary mb-2 bg-secondary-bg dark:bg-transparent md:relative'
+  const prefix = 'md:max-w-sm md:h-[650px] lg:h-[650px]  lg:max-w-md max-w-md   hover:shadow-xl rounded shadow-lg border-2 border-t-primary mb-2 bg-secondary-bg dark:bg-transparent md:relative'
   switch (id) {
     case 1: return `${prefix} lg:col-start-div1 lg:col-end-div1 lg:row-start-div1 lg:row-end-div1 `;
-    case 2: return `${prefix} lg:col-start-div2 lg:col-end-div2 lg:row-start-div2 lg:row-end-div2`;
-    case 3: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
+    case 3: return `${prefix} lg:col-start-div2 lg:col-end-div2 lg:row-start-div2 lg:row-end-div2`;
+    case 2: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
     case 4: return `${prefix} lg:col-start-div4 lg:col-end-div4 lg:row-start-div4 lg:row-end-div4`;
   }
   
-}
-
-
-/**
- * Asserts if the value passed is `defined`
- *
- * @param value {*} Value to be asserted
- *
- * @returns {boolean} `true` | `false`
- */
- export function isDefined(value: any): boolean {
-  return typeof value !== "undefined" && value !== undefined;
 }

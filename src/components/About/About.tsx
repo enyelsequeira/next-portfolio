@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = (): JSX.Element => {
   return (
-    <div className="flex flex-col  md:flex-col lg:flex-row md:p-8 my-5 bg-[#F5F5F5] dark:bg-[#15223C] rounded-md">
+    <div className="flex flex-col  md:flex-col lg:flex-row md:p-8 my-5 bg-[#F5F5F5] dark:bg-[#15223C] rounded-md" id="about">
       <div className="w-full  md:w-3/4 lg:w-2/4 md:mx-auto p-6 md:p-6 " >
         <Image className="rounded-2xl shadow-2xl filter drop-shadow-lg" width="800" height="700" src="/images/about-me.svg" />
       </div>

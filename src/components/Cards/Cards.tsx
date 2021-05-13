@@ -45,14 +45,12 @@ const Cards = ({ data }: Projects): JSX.Element => {
 
   return (
     <>
-      <p className="text-6xl text-t-primary p-4  font-display tracking-wider dark:text-d-t-base">My Projects</p>
-      <motion.div ref={ref} className="flex flex-col items-center  md:justify-center w-full md:flex-row md:flex-wrap lg:grid lg:grid-cols-test lg:grid-row-t lg:justify-center gap-x-4 gap-y-3 my-12">
+      <p className="text-6xl text-t-primary p-4  font-display tracking-wider dark:text-d-t-base " id="projects">My Projects</p>
+      <motion.div ref={ref} className="flex flex-col items-center  md:justify-center w-full md:grid md:grid-cols-2 md:justify-items-center lg:grid lg:grid-cols-test lg:grid-row-t lg:justify-center md:gap-x-2 gap-y-2  lg:gap-x-4 lg:gap-y-3 my-12 p-1">
         {data.map((project: Project) => {
-          console.log("my project: ", project)
           return (
             <>
-              <motion.div animate={animation} key={project.slug} className={`${classNamesForGrid(project.id)} font-body`}>
-
+              <motion.div animate={animation} key={project.title} className={`${classNamesForGrid(project.id)} font-body`}>
                 <div className="p-2  relative group  transform hover:-translate-y-1 duration-300">
                   <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`}>
                     <a>
@@ -61,6 +59,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </Link>
                   {project.technologies && (
                     <div className="flex  absolute -bottom-4 right-3 w-2/5 justify-around">{project.technologies.map((tech) => {
+                      console.log(tech, )
                       return (
                         <span key={tech.id} className="text-t-base text-2xl dark:text-d-accent">{renderIcon(tech.name)}</span>
                       )
@@ -81,9 +80,9 @@ const Cards = ({ data }: Projects): JSX.Element => {
                 </div>
                 <div className="px-6 pt-2 pb-2">
                   <p className="text-lg pb-3 font-display font-light">Stack</p>
-                  {project.technologies.map((tag) => {
+                  {project.technologies.map((tag, i) => {
                     return (
-                      <span key={tag.id} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag.name}</span>
+                      <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag.name}</span>
                     )
                   })}
                 </div>
