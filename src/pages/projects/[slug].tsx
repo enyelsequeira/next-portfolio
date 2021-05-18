@@ -1,7 +1,9 @@
+import { AnimatePresence } from 'framer-motion'
 import fs from 'fs'
 import matter from 'gray-matter'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
+import { useRouter } from "next/router"
 import path from 'path'
 import readingTime from "reading-time"
 import MarkdownComponents from '../../components/MarkdownComponents/MarkdownComponents'
@@ -11,11 +13,17 @@ import { projectFilePaths, PROJECT_PATH } from '../../utils/mdxUtils'
 
 
 export default function PostPage({ source, frontMatter }) {
+  const { query: { slug } } = useRouter()
+    ;
   const content = hydrate(source, { components: MarkdownComponents })
   return (
-    <Project data={frontMatter}>
-      {content}
-    </Project>
+    <AnimatePresence>
+      {slug && <Project data={frontMatter}>
+        {content}
+      </Project>}
+    </AnimatePresence>
+
+
   )
 }
 
@@ -46,7 +54,7 @@ export const getStaticProps = async ({ params }) => {
         wordCount: content.split(/\s+/gu).length,
         readingTime: readingTime(content),
         ...data
-        
+
       }
     },
   }

@@ -59,7 +59,6 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </Link>
                   {project.technologies && (
                     <div className="flex  absolute -bottom-4 right-3 w-2/5 justify-around">{project.technologies.map((tech) => {
-                      console.log(tech, )
                       return (
                         <span key={tech.id} className="text-t-base text-2xl dark:text-d-accent">{renderIcon(tech.name)}</span>
                       )
@@ -95,7 +94,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </div>
                   <motion.div className="cursor-pointer font-extrabold hover:text-light-accent dark:hover:text-red-400 flex" animate={arrowAnimation}>
                     <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`} >
-                      <a className="flex items-center ml-2 pl-2"> More  <AiOutlineArrowRight className="text-xl" /> </a>
+                      <motion.a className="flex items-center ml-2 pl-2" layoutId={project.slug}> More  <AiOutlineArrowRight className="text-xl"  /> </motion.a>
                     </Link>
                   </motion.div>
 

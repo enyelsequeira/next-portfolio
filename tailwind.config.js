@@ -51,6 +51,8 @@ module.exports = {
       typography: () => ({
         DEFAULT: {
           css: {
+            "max-width": "74ch",
+            "width": "100%",
             'ul > li > p > a': {
               color: 'var(--accent)',
               textDecoration: 'none',

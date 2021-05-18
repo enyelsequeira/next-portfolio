@@ -1,6 +1,6 @@
 import PageLayout from "@/layouts/MainLayout";
 import "@/styles/main.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 
@@ -13,10 +13,10 @@ const pageVariants = {
     backgroundColor: 'transparent',
     filter: ``,
     opacity: 1,
-    transition:{
+    transition: {
       duration: 2,
       type: 'tween',
-      ease: [0.17, 0.67, 0.83, 0.67] 
+      ease: [0.17, 0.67, 0.83, 0.67]
     }
   },
   pageExit: {
@@ -24,7 +24,7 @@ const pageVariants = {
     filter: `invert()`,
     opacity: 0
   },
- 
+
 }
 
 const pageMotionProps = {
@@ -38,13 +38,17 @@ const pageMotionProps = {
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <AnimatePresence exitBeforeEnter>
-      <motion.div {...pageMotionProps}>
-        <ThemeProvider attribute="class">
-          <PageLayout>
-            <Component {...pageProps} />
-          </PageLayout>
-        </ThemeProvider>
-      </motion.div>
+      <AnimateSharedLayout type="crossfade">
+
+        <motion.div {...pageMotionProps}>
+          <ThemeProvider attribute="class">
+            <PageLayout>
+              <Component {...pageProps} />
+            </PageLayout>
+          </ThemeProvider>
+        </motion.div>
+      </AnimateSharedLayout>
+
 
 
     </AnimatePresence>

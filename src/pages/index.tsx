@@ -16,20 +16,6 @@ export default function Home({projects}) {
   )
 }
 
-// export function getStaticProps() {
-//   const projects = projectFilePaths.map((filePath) => {
-//     const source = fs.readFileSync(path.join(PROJECT_PATH, filePath))
-//     const { content, data } = matter(source)
-
-//     return {
-//       content,
-//       data,
-//       filePath,
-//     }
-//   })
-
-//   return { props: { projects } }
-// }
 
 export async function getStaticProps(){
   const projects = await getAllFileFrontMatter("projects")
