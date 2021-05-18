@@ -19,10 +19,19 @@ const MarkdownComponents = {
     return <span className="text-t-ternary ">{props.children}</span>
   },
 
+  p: (props) => {
+    return (
+      <article className="text-justify p-2">
+        {props.children}
+
+      </article>
+    )
+  },
+
   img: (props) => {
     return (
       <>
-        {props.src && <Image className="rounded-xl" width="500" height="300" src={props.src} alt={props.alt} layout="responsive" />}
+        {props.src && <Image className="rounded-xl " width="500" height="300" src={props.src} alt={props.alt} layout="responsive" />}
       </>
     )
   },
