@@ -45,8 +45,8 @@ const Cards = ({ data }: Projects): JSX.Element => {
 
   return (
     <>
-      <p className="text-6xl text-t-primary p-4  font-display tracking-wider dark:text-d-t-base " id="projects">My Projects</p>
-      <motion.div ref={ref} className="flex flex-col items-center  md:justify-center w-full md:grid md:grid-cols-2 md:justify-items-center lg:grid lg:grid-cols-test lg:grid-row-t lg:justify-center md:gap-x-2 gap-y-2  lg:gap-x-4 lg:gap-y-3 my-12 p-1">
+      <p className="text-6xl text-t-primary p-4  font-display tracking-wider dark:text-d-t-base my-7" id="projects">My Projects</p>
+      <motion.div ref={ref} className="flex flex-col items-center  md:justify-center w-full md:grid md:grid-cols-2 md:justify-items-center lg:grid lg:grid-cols-test lg:grid-row-t lg:justify-center md:gap-x-2 gap-y-2  lg:gap-x-4 lg:gap-y-3 my-12 p-1 bg-[#F5F5F5] dark:bg-[#15223C] py-7">
         {data.map((project: Project) => {
           return (
             <>
@@ -94,7 +94,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </div>
                   <motion.div className="cursor-pointer font-extrabold hover:text-light-accent dark:hover:text-red-400 flex" animate={arrowAnimation}>
                     <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`} >
-                      <motion.a className="flex items-center ml-2 pl-2" layoutId={project.slug}> More  <AiOutlineArrowRight className="text-xl"  /> </motion.a>
+                      <a className="flex items-center ml-2 pl-2" > More  <AiOutlineArrowRight className="text-xl"  /> </a>
                     </Link>
                   </motion.div>
 

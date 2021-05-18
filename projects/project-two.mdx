@@ -1,0 +1,103 @@
+---
+id: 2
+title: 'Movie App'
+publishedAt: '2020-03-22'
+image: /images/movies.png
+summary: This app is a ReactJs application, using the latest technologies, such as hooks, scss modules to style and the most important using AI, I've integrated AI to be able to ask a few simple question.
+github: "https://github.com/enyelsequeira/movieshook"
+visit: "https://newmovies.netlify.app/movie"
+technologies:
+  - name: React
+    type: Front-end
+    id: 1
+  - name: Redux
+    type: State-Management
+    id: 2
+  - name: MaterialUI
+    type: CSS
+    id: 3
+---
+
+
+
+# Outline
+
+- [Introduction](#introduction)
+- [Functionalities](#functionalities)
+- [Challenges](#challenges)
+- [Coming Features](#improvements-that-could-be-made-and-are-in-the-process)
+- [Stack](#technologies)
+- [Previews](#previews)
+- [Running](#running-the-app)
+- [Demo/site](#demo)
+
+# introduction
+
+This was my first big project after finishing my bootcamp, and it's the one I am the most proud of, using up to date stack.
+
+This is a movie app that allows user to search for any movie possible, and also allows the user to see information about each specific movie, as well as the trailer for specified movie. 
+
+The difference between this app and other movies app is that this app allows the user to speak to the app by giving certain commands and the app will do those command accordingly using <span>AI</span>.
+
+
+# functionalities 
+- It allows the user to click on a specific Genre and the app fetches movies according to that Genre.
+- Displays information about each specific movie from reviews to cast of the film
+- It allows the user to give commands such as:
+  - Go to (category...)
+  - change screen mode
+  - What does this app do?
+  - more to come
+- It allows the user to change screen mode
+
+
+# challenges
+- Getting used to working with <span>MaterialUI</span> 
+- Using <span> Redux </span> to control state Management in a some what big application
+- Making the layout responsive actually took some time to make it look the way I wanted
+
+
+
+# improvements that could be made and are in the process
+- Give results as the users type a letter or word
+- Allowing the user to save movies
+- Allowing user to have an own account
+
+# technologies
+
+- React
+- React-router-dom
+- Redux, Thunk
+- MaterialUI
+
+
+
+# previews
+
+![previewOne](/images/blog.png)
+
+![previewTwo](/images/blog.png)
+
+![previewThree](/images/blog.png)
+
+# Running the app
+
+- Clone the app
+
+- Install Dependencies
+
+```bash
+cd front-end or cd back-end
+npm install 
+yarn add
+```
+
+- Create .env file and add your information from <span>TMDB</span>
+```javascript
+REACT_APP_API_KEY='YourAPIKey';
+```
+
+
+# demo
+- [site](https://newmovies.netlify.app/)
+- [code](https://github.com/enyelsequeira/movieshook)

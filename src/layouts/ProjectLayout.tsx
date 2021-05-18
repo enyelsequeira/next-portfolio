@@ -9,7 +9,6 @@ interface Props {
   data: Project
 }
 const ProjectLayout: FC<Props> = ({ children, data }): JSX.Element => {
-  console.log(data, "from layout");
   return (
     <motion.div className="my-6  flex flex-col items-center space-y-2" layoutId={data.slug} initial={{ opacity: 0 }}
     animate={{ opacity: [0.3, 0.5, 0.7, 0.8, 1] }}
