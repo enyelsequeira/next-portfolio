@@ -10,13 +10,13 @@ const Footer: FC = (): JSX.Element => {
         <div className="cursor-pointer">
           <Link href="/">
             <a>
-              <Image src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
+              <Image alt="icons for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
             </a>
           </Link>
 
         </div>
         <p className="text-5xl text-d-t-base p-4 lg:pl-12">Let's Talk</p>
-        <Link href="/" >
+        <Link href="/contact" >
           <a className="border-2 font-body dark:bg-d-accent text-dark text-xl px-4 py-2 rounded-lg bg-t-ternary hover:bg-light-accent transition duration-700  dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5  flex items-center hover:border-blue-800 ">
             Let's Chat <AiFillMessage className="ml-2" />
           </a>

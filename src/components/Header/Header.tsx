@@ -19,7 +19,7 @@ const Header: FC = (): JSX.Element => {
               <div className="w-full relative flex justify-between lg:w-auto px-4 lg:sticky  lg:justify-start">
                 <Link href="/">
                   <a className="text-sm font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase">
-                    <Image src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
+                    <Image alt="icon for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
                   </a>
                 </Link>
 

@@ -51,10 +51,10 @@ const Cards = ({ data }: Projects): JSX.Element => {
           return (
             <>
               <motion.div animate={animation} key={project.title} className={`${classNamesForGrid(project.id)} font-body`}>
-                <div className="p-2  relative group  transform hover:-translate-y-1 duration-300">
+                <div className="p-2  relative ">
                   <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`}>
-                    <a>
-                      <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.image} width="700" height="400" />
+                    <a className="group  transform hover:-translate-y-1 duration-300">
+                      <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.image} width="700" height="400" alt={project.title} />
                     </a>
                   </Link>
                   {project.technologies && (
@@ -87,14 +87,14 @@ const Cards = ({ data }: Projects): JSX.Element => {
                 </div>
                 <div className="flex items-center justify-between px-7 py-2  md:absolute bottom-1 md:w-full ">
                   <div className="flex w-4/5 justify-between">
-                    <a href={project.visit} target='_blank'
-                      rel='noopener noreferrer' className="border-2 bg-purple-200 dark:bg-d-accent dark:text-d-secondary w-max px-4 py-1 h-max rounded-md hover:bg-t-ternary dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5">Visit</a>
-                    <a href={project.github} target='_blank'
-                      rel='noopener noreferrer' className="border-2 bg-purple-200 dark:bg-d-accent dark:text-d-secondary w-max px-4 py-1 h-max rounded-md hover:bg-t-ternary dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5">code</a>
+                    <motion.a href={project.visit} target='_blank'
+                      rel='noopener noreferrer' className="border-2 bg-purple-200 dark:bg-d-accent dark:text-d-secondary w-max px-4 py-1 h-max rounded-md hover:bg-t-ternary dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5" whileHover={{ scale: 1.1, y: [1,5,1,5]}}>Visit</motion.a>
+                    <motion.a href={project.github} target='_blank'
+                      rel='noopener noreferrer' className="border-2 bg-purple-200 dark:bg-d-accent dark:text-d-secondary w-max px-4 py-1 h-max rounded-md hover:bg-t-ternary dark:hover:bg-d-t-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5" whileHover={{ scale: 1.1, y: [1,5,1,5]}}>code</motion.a>
                   </div>
                   <motion.div className="cursor-pointer font-extrabold hover:text-light-accent dark:hover:text-red-400 flex" animate={arrowAnimation}>
                     <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`} >
-                      <a className="flex items-center ml-2 pl-2" > More  <AiOutlineArrowRight className="text-xl"  /> </a>
+                      <a className="flex items-center ml-2 pl-2" > Read More  <AiOutlineArrowRight className="text-xl"  /> </a>
                     </Link>
                   </motion.div>
 

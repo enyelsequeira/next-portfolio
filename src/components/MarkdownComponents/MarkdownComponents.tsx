@@ -13,16 +13,25 @@ const MarkdownComponents = {
   h2: (props) => <h2 {...props} />,
   a: (props) => {
     // console.log("children", props)
-    return <a className="no-underline capitalize" target={isOuterLink(props.children)} href={props.href}>{props.children}</a>
+    return <a className="no-underline capitalize" target={isOuterLink(props.children)} rel="noreferrer" href={props.href}>{props.children}</a>
   },
   span: (props) => {
     return <span className="text-t-ternary ">{props.children}</span>
   },
 
+  p: (props) => {
+    return (
+      <article className="text-justify p-2">
+        {props.children}
+
+      </article>
+    )
+  },
+
   img: (props) => {
     return (
       <>
-        {props.src && <Image className="rounded-xl" width="500" height="300" src={props.src} alt={props.alt} layout="responsive" />}
+        {props.src && <Image  className="rounded-xl " width="500" height="300" src={props.src} alt={props.alt} layout="responsive" />}
       </>
     )
   },

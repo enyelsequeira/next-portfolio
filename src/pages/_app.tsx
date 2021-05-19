@@ -1,8 +1,11 @@
 import PageLayout from "@/layouts/MainLayout";
 import "@/styles/main.css";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimateSharedLayout, motion } from "framer-motion";
+import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
+import SEO from '../../seo.config';
+
 
 const pageVariants = {
   pageInitial: {
@@ -37,9 +40,8 @@ const pageMotionProps = {
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <AnimateSharedLayout type="crossfade">
-
+    <AnimateSharedLayout type="crossfade">
+        <DefaultSeo {...SEO} />
         <motion.div {...pageMotionProps}>
           <ThemeProvider attribute="class">
             <PageLayout>
@@ -51,7 +53,6 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
 
 
-    </AnimatePresence>
 
   )
 }
