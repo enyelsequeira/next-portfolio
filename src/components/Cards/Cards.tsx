@@ -94,7 +94,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                   </div>
                   <motion.div className="cursor-pointer font-extrabold hover:text-light-accent dark:hover:text-red-400 flex" animate={arrowAnimation}>
                     <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`} >
-                      <a className="flex items-center ml-2 pl-2" > More  <AiOutlineArrowRight className="text-xl"  /> </a>
+                      <a className="flex items-center ml-2 pl-2" > Read More  <AiOutlineArrowRight className="text-xl"  /> </a>
                     </Link>
                   </motion.div>
 

@@ -13,7 +13,7 @@ const MarkdownComponents = {
   h2: (props) => <h2 {...props} />,
   a: (props) => {
     // console.log("children", props)
-    return <a className="no-underline capitalize" target={isOuterLink(props.children)} href={props.href}>{props.children}</a>
+    return <a className="no-underline capitalize" target={isOuterLink(props.children)} rel="noreferrer" href={props.href}>{props.children}</a>
   },
   span: (props) => {
     return <span className="text-t-ternary ">{props.children}</span>
