@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <link rel="icon" href={meta.image} sizes="32x32"/>
           <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
-        <body className="max-w-screen-xl border-2 border-red-400 mx-auto bg-light dark:bg-dark  ">
+        <body className="max-w-screen-xl  mx-auto bg-light dark:bg-dark  ">
           <Main />
           <NextScript />
         </body>
