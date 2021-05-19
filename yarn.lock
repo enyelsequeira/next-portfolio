@@ -3704,6 +3704,11 @@ next-remote-watch@0.2.0:
     commander "^5.0.0"
     express "^4.17.1"
 
+next-seo@^4.24.0:
+  version "4.24.0"
+  resolved "https://registry.nlark.com/next-seo/download/next-seo-4.24.0.tgz#7c0447da00b8574dcda5c6979771a7f6efd24f55"
+  integrity sha1-fARH2gC4V03NpcaXl3Gn9u/ST1U=
+
 next-themes@^0.0.14:
   version "0.0.14"
   resolved "https://registry.nlark.com/next-themes/download/next-themes-0.0.14.tgz#2b9861990bc453149e23d8e6ef1a25a119e36675"

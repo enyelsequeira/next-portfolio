@@ -13,7 +13,7 @@ const Hero = ():JSX.Element => {
       </div>
 
       <motion.div className="w-full  md:w-2/4 p-8 md:p-6 " initial={{opacity: 0}} animate={{opacity: 1 }} transition={{ duration: 4}}>
-        <Image   src="/images/workpic.png" width="700" height="600" className="rounded-2xl shadow-2xl filter drop-shadow-lg"  />
+        <Image alt="personal portfolio pic"  src="/images/workpic.png" width="700" height="600" className="rounded-2xl shadow-2xl filter drop-shadow-lg"  />
         
       </motion.div>
       

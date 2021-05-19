@@ -54,7 +54,7 @@ const Cards = ({ data }: Projects): JSX.Element => {
                 <div className="p-2  relative ">
                   <Link as={`/projects/${project.slug}`} href={`/projects/[slug]`}>
                     <a className="group  transform hover:-translate-y-1 duration-300">
-                      <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.image} width="700" height="400" />
+                      <Image className="rounded-xl cursor-pointer  transform duration-300 group-hover:scale-110" src={project.image} width="700" height="400" alt={project.title} />
                     </a>
                   </Link>
                   {project.technologies && (

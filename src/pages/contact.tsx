@@ -1,6 +1,7 @@
 import { emailSend, errorClasses, inputClasses, labelClasses } from '@/utils/constant';
 import { useFormik } from 'formik';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
@@ -37,10 +38,15 @@ const Form = () => {
     },
   });
   return (
+    <>
+    <NextSeo
+      title="Contact to reach Enyel Sequeira"
+      description="A short contact form to reach me, please leave a message and I will get back to you as soon as possible"
+    />
     <div className="flex items-center min-h-screen md:py-16">
       <div className="container mx-auto flex">
         <div className="md:w-1/2 hidden lg:block p-6">
-          {emailSent ? <Image src='/images/opened.svg' width="500" height="600" /> : <Image src='/images/letter.svg' width="500" height="600" /> }
+          {emailSent ? <Image alt="picture for email" src='/images/opened.svg' width="500" height="600" /> : <Image src='/images/letter.svg' width="500" height="600" alt="picture for email" /> }
           
         </div>
 
@@ -116,6 +122,7 @@ const Form = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

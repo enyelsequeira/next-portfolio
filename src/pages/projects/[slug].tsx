@@ -10,6 +10,10 @@ import MarkdownComponents from '../../components/MarkdownComponents/MarkdownComp
 import Project from '../../layouts/ProjectLayout'
 import { projectFilePaths, PROJECT_PATH } from '../../utils/mdxUtils'
 
+const meta = {
+  title: 'Project',
+  description: 'testing',
+}
 
 
 export default function PostPage({ source, frontMatter }) {
@@ -17,12 +21,13 @@ export default function PostPage({ source, frontMatter }) {
     ;
   const content = hydrate(source, { components: MarkdownComponents })
   return (
+    <>
     <AnimatePresence>
       {slug && <Project data={frontMatter}>
         {content}
       </Project>}
     </AnimatePresence>
-
+</>
 
   )
 }
