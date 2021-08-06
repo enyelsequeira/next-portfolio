@@ -10,7 +10,8 @@ const Footer: FC = (): JSX.Element => {
         <div className="cursor-pointer">
           <Link href="/">
             <a>
-              <Image alt="icons for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
+              <Image alt="icons for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" placeholder="blur"
+                blurDataURL="/images/icon.jpg" />
             </a>
           </Link>
 
@@ -25,7 +26,7 @@ const Footer: FC = (): JSX.Element => {
       <div className="text-4xl text-center px-1 md:px-0 my-2 py-4 font-body">
         © {new Date().getFullYear()} | Enyel Sequeira
 
-    </div>
+      </div>
     </>
   )
 }

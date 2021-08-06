@@ -9,10 +9,10 @@ interface Props {
   data: Project
 }
 const ProjectLayout: FC<Props> = ({ children, data }): JSX.Element => {
- 
+
   return (
     <>
-    
+
       <motion.div className="my-6  flex flex-col items-center space-y-2" layoutId={data.slug} initial={{ opacity: 0 }}
         animate={{ opacity: [0.3, 0.5, 0.7, 0.8, 1] }}
         exit={{ opacity: 0, transition: { duration: 0.15 } }}
@@ -23,7 +23,8 @@ const ProjectLayout: FC<Props> = ({ children, data }): JSX.Element => {
         <motion.div className="flex justify-center p-2 pb-8" initial={{ x: "-350vw" }} animate={{
           x: 1, scale: [1, 1.1, 1.2, 1.1, 1],
         }} transition={{ duration: 2, bounce: 0.5, type: "spring" }}>
-          <Image   className="rounded-md shadow-lg" src={data.image} width="900" height="400" alt={data.title} />
+          <Image className="rounded-md shadow-lg" src={data.image} width="900" height="400" alt={data.title} placeholder="blur"
+            blurDataURL={data.image} />
         </motion.div>
         <main className="m-auto prose prose-sm md:prose-lg text-body-dark dark:text-white p-2 font-body">
           {children}

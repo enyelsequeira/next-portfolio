@@ -15,11 +15,12 @@ const Header: FC = (): JSX.Element => {
         <div className="w-full px-4">
           <nav className="flex flex-wrap sticky items-center justify-between px-2 py-3 bg-t-ternary dark:bg-d-third font-display">
             <div className="container px-4 mx-auto flex flex-wrap items-center sticky justify-between space-y-1">
-              
+
               <div className="w-full relative flex justify-between lg:w-auto px-4 lg:sticky  lg:justify-start">
                 <Link href="/">
                   <a className="text-sm font-medium leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase">
-                    <Image alt="icon for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" />
+                    <Image alt="icon for portfolio" src="/images/icon.jpg" width="50" height="50" className="text-lg rounded-full" placeholder="blur"
+                      blurDataURL="/images/icon.jpg" />
                   </a>
                 </Link>
 
@@ -51,7 +52,7 @@ const Header: FC = (): JSX.Element => {
 
                   <li className="nav-item">
                     <Link href='/#projects'>
-                      <a  className="px-3 py-2 flex items-center text-xs uppercase font-medium leading-snug hover:opacity-75">
+                      <a className="px-3 py-2 flex items-center text-xs uppercase font-medium leading-snug hover:opacity-75">
                         Projects
                       </a>
                     </Link>

@@ -31,7 +31,8 @@ const MarkdownComponents = {
   img: (props) => {
     return (
       <>
-        {props.src && <Image  className="rounded-xl " width="500" height="300" src={props.src} alt={props.alt} layout="responsive" />}
+        {props.src && <Image className="rounded-xl " width="500" height="300" src={props.src} alt={props.alt} layout="responsive" placeholder="blur"
+          blurDataURL={props.src} />}
       </>
     )
   },
