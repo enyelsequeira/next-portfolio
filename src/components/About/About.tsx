@@ -5,7 +5,8 @@ const About = (): JSX.Element => {
   return (
     <div className="flex flex-col  md:flex-col lg:flex-row md:p-8 my-5 rounded-md" id="about">
       <div className="w-full  md:w-3/4 lg:w-2/4 md:mx-auto p-6 md:p-6 " >
-        <Image alt="about-me picture" className="rounded-2xl shadow-2xl filter drop-shadow-lg" width="800" height="700" src="/images/about-me.svg" />
+        <Image alt="about-me picture" className="rounded-2xl shadow-2xl filter drop-shadow-lg" width="800" height="700" src="/images/about-me.svg" placeholder="blur"
+          blurDataURL="/images/about-me.svg" />
       </div>
 
       <div className="w-full md:w-4/4  lg:w-2/4 p-2 md:p-6 ">
