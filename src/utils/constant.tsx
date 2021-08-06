@@ -3,32 +3,32 @@ import * as emailjs from 'emailjs-com';
 import { ReactElement } from "react";
 import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiOutlineDownload } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
-import { SiAmazonaws, SiGatsby, SiGraphql, SiMaterialUi, SiNextDotJs, SiNodeDotJs, SiRedux, SiStyledComponents, SiTailwindcss, SiTypescript } from "react-icons/si";
-export interface Technology{
+import { SiAmazonaws, SiGatsby, SiGraphql, SiMaterialUi, SiNextDotJs, SiNodeDotJs, SiRedux, SiStyledComponents, SiTailwindcss, SiTypescript, SiMarkdown } from "react-icons/si";
+export interface Technology {
   name: string;
-  type:string;
+  type: string;
   id: number
 }
 
 export interface Project {
-    id:number
-    title: string;
-    publishedAt: string;
-    image?: string;
-    summary: string;
-    github: string;
-    visit: string;
-    technologies: Technology[];
-    slug: string;
-    readingTime: {
-      minutes?: number;
-      text?: string;
-      time?: number;
-      words?: number;
-    }
+  id: number
+  title: string;
+  publishedAt: string;
+  image?: string;
+  summary: string;
+  github: string;
+  visit: string;
+  technologies: Technology[];
+  slug: string;
+  readingTime: {
+    minutes?: number;
+    text?: string;
+    time?: number;
+    words?: number;
+  }
 
 }
-export interface Projects{
+export interface Projects {
   data: Project[]
 }
 
@@ -44,11 +44,12 @@ const icons = {
   TypeScript: SiTypescript,
   Tailwind: SiTailwindcss,
   NodeJs: SiNodeDotJs,
-  AWS: SiAmazonaws
+  AWS: SiAmazonaws,
+  Contentful: SiMarkdown,
 
 }
-export const renderIcon = (type:string) =>{
-  if(!icons[type]) return false;
+export const renderIcon = (type: string) => {
+  if (!icons[type]) return false;
 
   const Icon = icons[type]
   return <Icon />
@@ -56,7 +57,7 @@ export const renderIcon = (type:string) =>{
 
 // social media 
 
-export interface Social{
+export interface Social {
   name: string
   icon: ReactElement,
   link: string,
@@ -67,38 +68,38 @@ export interface Social{
 export const SocialMedia: Social[] = [
   {
     name: "Twitter",
-    icon: <AiFillTwitterCircle/>,
+    icon: <AiFillTwitterCircle />,
     link: "https://twitter.com/enyelsequeira?lang=en",
     target: "_blank"
   },
   {
     name: "facebook",
-    icon: <AiFillFacebook/>,
+    icon: <AiFillFacebook />,
     link: "https://www.facebook.com/enyel.sequeira/",
     target: "_blank"
   },
   {
     name: "Instagram",
-    icon: <AiFillInstagram/>,
+    icon: <AiFillInstagram />,
     link: "https://www.instagram.com/e.s.codes/?hl=en",
     target: "_blank"
   },
   {
     name: "Github",
-    icon: <AiFillGithub/>,
-    link:"https://github.com/enyelsequeira",
+    icon: <AiFillGithub />,
+    link: "https://github.com/enyelsequeira",
     target: "_blank"
   },
   {
     name: "LinkedIn",
-    icon: <AiFillLinkedin/>,
+    icon: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/enyel-sequeira-333a60100/",
     target: "_blank"
 
   },
   {
     name: "Resume",
-    icon: <AiOutlineDownload/>,
+    icon: <AiOutlineDownload />,
     link: "/resume.pdf",
     target: "_blank",
     download: true
@@ -114,16 +115,16 @@ export const classNamesForGrid = (id: number) => {
     case 2: return `${prefix} lg:col-start-div3 lg:col-end-div3 lg:row-start-div3 lg:row-end-div3`;
     case 4: return `${prefix} lg:col-start-div4 lg:col-end-div4 lg:row-start-div4 lg:row-end-div4`;
   }
-  
+
 }
 
 
 
-interface templateParams{
+interface templateParams {
   firstName: string,
-    email: string
-    phone: number
-    message: string
+  email: string
+  phone: number
+  message: string
 }
 export const emailSend = (objectEmail) => {
   const emailData = JSON.parse(objectEmail);
@@ -138,7 +139,7 @@ export const emailSend = (objectEmail) => {
   const template_id = 'template_lk4f9zg';
   const user_id = 'user_BZ6TELUu4kYqjUYYqHzta';
 
-  let templateParams:templateParams = {
+  let templateParams: templateParams = {
     firstName,
     email,
     phone,
@@ -160,4 +161,4 @@ export const inputClasses = `w-full px-3 py-2  border border-gray-300 rounded-md
 
 export const labelClasses = "block mb-2 text-sm font-semibold font-display text-words-light dark:text-words-dark tracking-wider"
 
-export const errorClasses ="text-red-200 text-lg"
+export const errorClasses = "text-red-200 text-lg"
