@@ -3,7 +3,7 @@ import * as emailjs from 'emailjs-com';
 import { ReactElement } from "react";
 import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiOutlineDownload } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
-import { SiAmazonaws, SiGatsby, SiGraphql, SiMaterialUi, SiNextDotJs, SiNodeDotJs, SiRedux, SiStyledComponents, SiTailwindcss, SiTypescript, SiMarkdown } from "react-icons/si";
+import { SiAmazonaws, SiGatsby, SiGraphql, SiMaterialui, SiNextdotjs, SiNodedotjs, SiRedux, SiStyledcomponents, SiTailwindcss, SiTypescript, SiMarkdown, } from "react-icons/si";
 export interface Technology {
   name: string;
   type: string;
@@ -36,14 +36,14 @@ export interface Projects {
 const icons = {
   React: FaReact,
   Redux: SiRedux,
-  MaterialUI: SiMaterialUi,
+  MaterialUI: SiMaterialui,
   Gatsby: SiGatsby,
   GraphQL: SiGraphql,
-  StyledComponents: SiStyledComponents,
-  Next: SiNextDotJs,
+  StyledComponents: SiStyledcomponents,
+  Next: SiNextdotjs,
   TypeScript: SiTypescript,
   Tailwind: SiTailwindcss,
-  NodeJs: SiNodeDotJs,
+  NodeJs: SiNodedotjs,
   AWS: SiAmazonaws,
   Contentful: SiMarkdown,
 

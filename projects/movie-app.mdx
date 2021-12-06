@@ -1,24 +1,22 @@
 ---
 id: 2
-title: 'Movie App'
-publishedAt: '2020-03-22'
-image: /images/movies.png
-summary: This app is a ReactJs application, using the latest technologies, such as hooks, scss modules to style and the most important using AI, I've integrated AI to be able to ask a few simple question.
-github: "https://github.com/enyelsequeira/movieshook"
-visit: "https://newmovies.netlify.app/movie"
+title: "Movie App"
+publishedAt: "2020-03-22"
+image: /images/tailwindmovies.png
+summary: This is a NextJs/TypeScript project. It has been updated from a previous version to use the latest stack. What makes this app special is that it allows you to interact by giving voice commands using AI.
+github: "https://github.com/enyelsequeira/tailwind-movies"
+visit: "https://tailwind-movies.vercel.app/"
 technologies:
-  - name: React
+  - name: Next
     type: Front-end
     id: 1
   - name: Redux
     type: State-Management
     id: 2
-  - name: MaterialUI
+  - name: Tailwind
     type: CSS
     id: 3
 ---
-
-
 
 # Outline
 
@@ -33,52 +31,57 @@ technologies:
 
 # introduction
 
-This was my first big project after finishing my bootcamp, and it's the one I am the most proud of, using up to date stack.
+This has been my hero project for quite sometime now, and it was time to upgrade it to use up date stack with NextJs and TypeScript.
 
-This is a movie app that allows user to search for any movie possible, and also allows the user to see information about each specific movie, as well as the trailer for specified movie. 
+The movie app is built using NextJs and TypeScript. It gives the ability to search for any possible movie, and also allows the user to see information about each specific movie, as well as the trailer for specified movie. This app is an upgraded version of my previous one, this one allows you to get information about <span> shows </span>.
+
+This app is also responsive in all devices, and it is built using TailwindCSS, along the way it uses the <span> React Hooks </span> to make it more efficient. Lastly its <span>SEO</span> is also pretty good.
 
 The difference between this app and other movies app is that this app allows the user to speak to the app by giving certain commands and the app will do those command accordingly using <span>AI</span>.
 
+If everything goes well most of this code will be used for a project video based tutorial taught by <span>JsMastery</span>. That one will be using React with MaterialUI.
 
-# functionalities 
+# functionalities
+
 - It allows the user to click on a specific Genre and the app fetches movies according to that Genre.
 - Displays information about each specific movie from reviews to cast of the film
 - It allows the user to give commands such as:
-  - Go to (category...)
-  - change screen mode
-  - What does this app do?
-  - more to come
-- It allows the user to change screen mode
-
+  - what does this app do?
+  - Hey Alan, can you tell me about this app?
+  - How can you help me?
+  - Go to specific Genre
+  - Change Mode
+  - Please Log me in
+  - Please log me out
+  - Please take me to my profile
+  - more to come ...
 
 # challenges
-- Getting used to working with <span>MaterialUI</span> 
+
+- Although I am an experienced Developer this was my first time using <span>TypeScript</span> in a big project.
 - Using <span> Redux </span> to control state Management in a some what big application
-- Making the layout responsive actually took some time to make it look the way I wanted
-
-
+- Making the layout responsive actually took some time to make it look the way I wanted, specially since this layout is not using pre-made components
 
 # improvements that could be made and are in the process
-- Give results as the users type a letter or word
-- Allowing the user to save movies
-- Allowing user to have an own account
+
+- Give results as the users type a letter or word (expensive)
+- Add more functionalities like instead of showing two list on the profile show all the possible ones
+- Allowing user to create an account directly within the app
 
 # technologies
 
-- React
-- React-router-dom
-- Redux, Thunk
-- MaterialUI
-
-
+- NextJS
+- TypeScript
+- Redux, RTQ
+- Tailwind
 
 # previews
 
-![previewOne](/images/movie1.png)
+![previewOne](/images/tailwindmovies1.png)
 
-![previewTwo](/images/movie2.png)
+![previewTwo](/images/tailwindmovies2.png)
 
-![previewThree](/images/movie3.png)
+![previewThree](/images/tailwindmovies3.png)
 
 # Running the app
 
@@ -87,17 +90,18 @@ The difference between this app and other movies app is that this app allows the
 - Install Dependencies
 
 ```bash
-cd front-end or cd back-end
-npm install 
+cd to folder
+npm install or
 yarn add
 ```
 
-- Create .env file and add your information from <span>TMDB</span>
+- Create .env.local file and add your information from <span>TMDB</span>
+
 ```javascript
-REACT_APP_API_KEY='YourAPIKey';
+NEXT_PUBLIC_API_KEY = "YourAPIKey";
 ```
 
-
 # demo
-- [site](https://newmovies.netlify.app/)
-- [code](https://github.com/enyelsequeira/movieshook)
+
+- [site](https://tailwind-movies.vercel.app/)
+- [code](https://github.com/enyelsequeira/tailwind-movies)
