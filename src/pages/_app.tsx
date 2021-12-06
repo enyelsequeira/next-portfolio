@@ -41,15 +41,15 @@ const pageMotionProps = {
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <AnimateSharedLayout type="crossfade">
-        <DefaultSeo {...SEO} />
-        <motion.div {...pageMotionProps}>
-          <ThemeProvider attribute="class">
-            <PageLayout>
-              <Component {...pageProps} />
-            </PageLayout>
-          </ThemeProvider>
-        </motion.div>
-      </AnimateSharedLayout>
+      <DefaultSeo {...SEO} />
+      <motion.div {...pageMotionProps}>
+        <ThemeProvider attribute="class">
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+        </ThemeProvider>
+      </motion.div>
+    </AnimateSharedLayout>
 
 
 
